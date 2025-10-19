@@ -52,9 +52,47 @@
       <div class="section__text">
         <p class="section__text__p1">Ciao, I'm</p>
         <h1 class="title">Alessandro Puglisi</h1>
-        <p class="section__text__p2">Roboticist
+        <p class="section__text__p2">PhD Candidate in Marine Robotics
         <!-- [!]CUSTOM Button customized and definedin style.css-->
-        <div class="btn-container">
+        
+        <div id="location-container">
+            <img
+              src="./assets/location2.png"
+              alt="Location figure"
+              class="location-image"
+            />
+          <p class="location__text">Montpellier,FR</p>    
+        </div>
+        
+        <div id="socials-container">
+          <div class="social-image">
+            <img
+              src="./assets/linkedin.png"
+              alt="My LinkedIn profile"
+              class="account-icon"
+              onclick="location.href='https://linkedin.com/in/puglisialessandro/'"
+            />
+          </div>
+          <div class="social-image">
+            <img
+              src="./assets/github.png"
+              alt="My Github profile"
+              class="account-icon"
+              onclick="location.href='https://github.com/AlePuglisi'"
+            />
+          </div>
+          <div class="social-image">
+            <img
+              src="./assets/instagram.png"
+              alt="My Instagram profile"
+              class="account-icon"
+              onclick="location.href='https://www.instagram.com/puglisialessandro/'"
+            />
+        </div>
+
+        </div>
+
+        <div class="profile-btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/resume.pdf')"
@@ -65,21 +103,9 @@
             Contact me
           </button>
         </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/puglisialessandro/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/AlePuglisi'"
-          />
-        </div>
+
       </div>
+
     </section>
 
     <section id="ready">
@@ -491,24 +517,32 @@
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:puglisialessandro27@gmail.com">puglisialessandro27@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/puglisialessandro/">Alessandro Puglisi</a></p>
-        </div>
-      </div>
+        <div class="contact-btn-container">
+          <button class="btn btn-color-2 project-btn" onclick="location.href='mailto:puglisialessandro27@gmail.com'">
+            
+            <div class="contact-info-container">
+              <img
+                src="./assets/email.png"
+                alt="Email icon"
+                class="icon contact-icon email-icon"
+              />
+              <p>puglisialessandro27@gmail.com</p>
+            </div>
+
+          </button>
+          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.linkedin.com/in/puglisialessandro/'">
+            
+            <div class="contact-info-container">
+              <img
+                src="./assets/email.png"
+                alt="Email icon"
+                class="icon contact-icon email-icon"
+              />
+              <p>LinkedIn Me</p>
+            </div>
+
+          </button>
+        </div>   
     </section>
 
     <!--FOOTER -->

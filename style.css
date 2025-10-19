@@ -21,9 +21,12 @@ p {
 
 /* TRANSITION */
 
-a,
 .btn {
   transition: all 300ms ease;
+}
+
+a{
+  transition: transform 0.3s ease;
 }
 
 /* DESKTOP NAV */
@@ -45,13 +48,17 @@ nav {
   font-size: 1.4rem; 
 }
 /* CUSTOM[!] Change navigation appearence */
+
 a {
   color: black;
   text-decoration: none;
   text-decoration-color: rgb(103, 142, 206);
+  display: inline-block;
 }
+
 /* CUSTOM[!] Change navigation apperance when we point on it */
 a:hover {
+  transform: translateY(-2px);
   color: rgb(62, 98, 155);;
   text-decoration: underline;
   text-underline-offset: 1rem;
@@ -158,7 +165,6 @@ a:hover {
   z-index: 1000; /* ensures it stays on top of everything */
   background-color: rgba(187, 214, 243, 0.7); /* so content below doesn't show through */
   /*box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/ /* optional nice shadow */
-  justify-content: space-around;
 }
 
 /* Since nav is fixed, add top margin to body content */
@@ -221,11 +227,53 @@ section {
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.0rem;
   gap: 1rem;
 }
 
+#location-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.location__text {
+  align-self: center;
+  text-align: center;
+}
+
+.social-image {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin: auto 0.5rem;
+  transition: transform 0.3s ease;
+}
+.social-image:hover {
+  transform: translateY(-3px);
+}
+
+#location-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.0rem;
+  gap: 1rem;
+}
+
+.location-image {
+  display: flex;
+  height: 40px;
+  width:  40px;
+}
 /* ICONS */
+
+.account-icon {
+  cursor: pointer; /*How the cursor looks on this*/
+  height: 3rem;
+}
 
 .icon {
   cursor: pointer; /*How the cursor looks on this*/
@@ -233,6 +281,13 @@ section {
 }
 
 /* BUTTONS */
+
+.profile-btn-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .btn-container {
   display: flex;
@@ -280,7 +335,7 @@ section {
   gap: 1rem;
 }
 
-/* GET READY SECTION */
+
 /* GET READY SECTION */
 #ready {
   padding-top: 20vh;
@@ -509,9 +564,10 @@ article .icon {
   transition: transform 0.3s ease;
   padding: 1.5rem;
 }
-.project-card:hover {
+
+/* .project-card:hover {
   transform: translateY(-5px);
-}
+} */
 
 .project-img {
   width: 100%;
@@ -594,6 +650,13 @@ article .icon {
 
 .contact-info-container p {
   font-size: larger;
+}
+
+.contact-btn-container {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .contact-icon {
