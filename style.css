@@ -36,26 +36,26 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 9vh;
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem; 
+  font-size: 1.4rem; 
 }
 /* CUSTOM[!] Change navigation appearence */
 a {
   color: black;
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: rgb(103, 142, 206);
 }
 /* CUSTOM[!] Change navigation apperance when we point on it */
 a:hover {
-  color: grey;
+  color: rgb(62, 98, 155);;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgb(103, 142, 206);
 }
 /* CUSTOM[!] Change Logo Name if desired */
 .logo {
@@ -97,7 +97,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: white;
+  background-color: rgba(187, 214, 243, 0.7);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -107,7 +107,7 @@ a:hover {
 .menu-links a {
   display: block;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
@@ -119,7 +119,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 350px;
 }
 
 /* Transforming the line from X to hamburg menu */
@@ -147,10 +147,29 @@ a:hover {
   transform: none;
 }
 
+/* FIX  */
+#desktop-nav, 
+#hamburger-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* fixed height */
+  z-index: 1000; /* ensures it stays on top of everything */
+  background-color: rgba(187, 214, 243, 0.7); /* so content below doesn't show through */
+  /*box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/ /* optional nice shadow */
+  justify-content: space-around;
+}
+
+/* Since nav is fixed, add top margin to body content */
+body {
+  padding-top: 10vh; /* same height as your nav (17vh from your CSS) */
+}
+
 /* SECTIONS */
 /* Target all Sections ! */
 section {
-  padding-top: 4vh;
+  padding-top: 12vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -261,6 +280,47 @@ section {
   gap: 1rem;
 }
 
+/* GET READY SECTION */
+/* GET READY SECTION */
+#ready {
+  padding-top: 20vh;
+  display: flex;
+  flex-direction: column; /* stack video then text */
+  align-items: center; /* center both horizontally */
+  justify-content: center; /* center vertically in the section */
+  height: 80vh;
+  text-align: center;
+  position: relative;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  /* adjust as needed */
+  max-width: 1000px;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem; /* optional for softer edges */
+}
+
+.video-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.video-title {
+  margin: 2rem;
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+
 /* ABOUT SECTION */
 
 #about {
@@ -287,10 +347,11 @@ section {
   border-radius: 2rem;
 }
 
+
 .arrow {
-  position: absolute; /*Absolute to the section position*/
-  right: -5rem;       /*-5   from right  corner*/
-  bottom: 2.5rem;     /*+2.5 from bottom corner*/
+  position: absolute;
+  right: -5rem;   
+  bottom: 2rem; 
 }
 
 .details-container {
@@ -312,6 +373,13 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+}
+
+
+/* SKILLS SECTION */
+
+#skills {
+  position: relative;
 }
 
 /* EXPERIENCE SECTION */
@@ -355,7 +423,7 @@ article .icon {
 
 /* PROJECTS SECTION */
 
-#projects {
+/* #projects {
   position: relative;
 }
 
@@ -378,7 +446,123 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+} */
+
+/* !!! --- TENTATIVE --- !!! */
+/* Project Section */
+
+#projects {
+  padding-top: 12vh;
+  height: 100vh;
+  margin: 0 0;
+  box-sizing: border-box;
+  min-height: fit-content;
+  position: relative;
+  overflow: visible;
 }
+
+/* Horizontal scroll container */
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* hide scrollbars */
+  padding: 0 0;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+
+
+/* Hide scrollbar but keep scroll functionality */
+.projects-container::-webkit-scrollbar {
+  display: none;
+}
+.projects-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Project cards */
+.project-card {
+  flex: 0 0 500px; 
+  height: 600px; 
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(187, 214, 243, 0.7);
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  padding: 1.5rem;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Arrow buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+.arrow2 {
+  position: absolute;
+  right: 5rem;
+  bottom: 4.0rem;
+  /* z-index: 30; */
+  width: 2.0rem; 
+  cursor: pointer;
+}
+
+
+
+/* EDUCATION SECTION */
+
+#education {
+  position: relative;
+}
+
 
 /* CONTACT */
 

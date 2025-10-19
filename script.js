@@ -5,3 +5,17 @@ function toggleMenu() {
   menu.classList.toggle("open"); //toggle function with open class linked 
   icon.classList.toggle("open");
 }
+
+
+const container = document.getElementById("projects-container");
+const btnLeft = document.getElementById("scroll-left");
+const btnRight = document.getElementById("scroll-right");
+
+btnLeft.addEventListener("click", () => {
+  container.scrollBy({ left: -300, behavior: "smooth" });
+});
+
+btnRight.addEventListener("click", () => {
+  container.scrollBy({ left: 300, behavior: "smooth" });
+});
+
