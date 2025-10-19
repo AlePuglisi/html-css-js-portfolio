@@ -11,7 +11,7 @@
     height: fit-content;
   }
 }
-
+/*If screen smaller than 1200px (e.g. phone) we let disappear desktop navigation, and show hamburger menu*/
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
