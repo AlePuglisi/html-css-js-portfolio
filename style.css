@@ -407,12 +407,11 @@ section {
   position: absolute;
   right: -5rem;   
   bottom: 2rem; 
-  width: 10rem;
   transition: transform 0.3s ease;
 }
 
 .arrow:hover {
-  transform: translateY(-3px);
+  transform: translateY(2px);
 }
 
 .details-container {
@@ -610,17 +609,17 @@ article .icon {
 
 .arrow2 {
   position: absolute;
-  right: 4rem;
-  bottom: 1rem;
+  right: 5rem;
+  bottom: 3rem;
   /* z-index: 30; */
-  width: 7rem; 
+  width: 2rem; 
   cursor: pointer;
   transition: transform 0.3s ease;;
 
 }
 
 .arrow2:hover {
-  transform: translateY(-3px);
+  transform: translateY(2px);
 }
 
 
