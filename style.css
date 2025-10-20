@@ -407,6 +407,12 @@ section {
   position: absolute;
   right: -5rem;   
   bottom: 2rem; 
+  width: 10rem;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-3px);
 }
 
 .details-container {
@@ -604,13 +610,18 @@ article .icon {
 
 .arrow2 {
   position: absolute;
-  right: 5rem;
-  bottom: 4.0rem;
+  right: 4rem;
+  bottom: 1rem;
   /* z-index: 30; */
-  width: 2.0rem; 
+  width: 7rem; 
   cursor: pointer;
+  transition: transform 0.3s ease;;
+
 }
 
+.arrow2:hover {
+  transform: translateY(-3px);
+}
 
 
 /* EDUCATION SECTION */
@@ -627,6 +638,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  position:relative
 }
 
 .contact-info-upper-container {
