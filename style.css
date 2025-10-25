@@ -416,12 +416,15 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  flex: 1;
+  flex: 1 1 250px;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-container {
@@ -455,10 +458,52 @@ section {
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.experience-entry {
+  color: rgb(85, 85, 85);
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.experience-entries {
+  display: inline-block; /* this gives a “center reference” under subtitle */
+  text-align: left;      /* entries stay left-aligned inside this inline box */
+}
+
+.skills-details-container {
+  margin-top: 6rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.experience-details-container {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.experience-containers {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: center;    /* center them horizontally if desired */
+  gap: 2rem;              /* spacing between experiences */
+}
+
+
+.experience-container {
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; /* left align text inside */
+  text-align: left;
 }
 
 .article-container {
@@ -466,7 +511,7 @@ section {
   text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 1.0rem;
   justify-content: space-around;
 }
 
@@ -623,9 +668,9 @@ article .icon {
 }
 
 
-/* EDUCATION SECTION */
+/* DIARY SECTION */
 
-#education {
+#diary {
   position: relative;
 }
 
