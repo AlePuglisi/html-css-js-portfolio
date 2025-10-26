@@ -101,4 +101,13 @@
   .text-container {
     text-align: justify;
   }
+  .contact-btns-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .btn-contact {
+    max-width: 90%; /* ✅ scales down on tablets/phones */
+  }
 }

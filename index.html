@@ -53,16 +53,31 @@
         <h1 class="title">Alessandro Puglisi</h1>
         <p class="section__text__p2">PhD Candidate in Marine Robotics
         <!-- [!]CUSTOM Button customized and definedin style.css-->
-        
-        <div id="location-container">
-            <img
-              src="./assets/location2.png"
-              alt="Location figure"
-              class="location-image"
-            />
-          <p class="location__text">Montpellier,FR</p>    
+        <div id="locations-container">
+
+          <div id="location-container">
+              <img
+                src="./assets/location2.png"
+                alt="Location figure"
+                class="location-image"
+              />
+            <p class="location__text">Montpellier,FR</p>    
+          </div>
+
+          <div id="location-container">
+            <div class="social-image">
+              <img
+                src="./assets/address.png"
+                alt="Office figure"
+                class="account-icon"
+                onclick="location.href='https://www.lirmm.fr/equipes/rsm/'"
+              />
+            </div>
+            <p class="location__text">Équipe Robotique Sous-Marine, LIRMM</p>    
+          </div>
+
         </div>
-        
+
         <div id="socials-container">
           <div class="social-image">
             <img
@@ -92,10 +107,7 @@
         </div>
 
         <div class="profile-btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
+          <button class="btn btn-color-2" onclick="window.open('./assets/docs/resume.pdf')">
             Resume
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -130,7 +142,7 @@
 
     <!--ABOUT SECTION -->
     <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
+      <p class="section__text__p1">Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
@@ -278,7 +290,7 @@
 
     <!--PROJECTS SECTION -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
+      <p class="section__text__p1">Browse My</p>
       <h1 class="title">Projects</h1>
 
       <div class="projects-wrapper">
@@ -286,68 +298,167 @@
 
         <div class="projects-container" id="projects-container">
           <!-- Each project card -->
+
           <div class="project-card">
             <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
-            <h2 class="project-title">Project One</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <div class="project-info">
+              <h2 class="project-title">ROV Doc Ricketts Simulation</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>            
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/AlePuglisi/ROV-Ricketts-ros2'">Gazebo</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Stonefish</button>
             </div>
           </div>
 
           <div class="project-card">
-            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
-            <h2 class="project-title">Project Two</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <img src="./assets/project-1.png" alt="Project 2" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Oculus Sonar Driver</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>            
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/AlePuglisi/sonar_driver_oculus'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Demo</button>
             </div>
           </div>
 
           <div class="project-card">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            <h2 class="project-title">Project Three</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <img src="./assets/project-1.png" alt="Project 3" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Mediterranean Fish Detector</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Dataset</button>
             </div>
           </div>
 
           <div class="project-card">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            <h2 class="project-title">Project Three</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <img src="./assets/project-1.png" alt="Project 4" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Multi-Modal Multi-Limbed Robot</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
             </div>
-          </div>
-          
-          <div class="project-card">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            <h2 class="project-title">Project Three</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">YouTube</button>
             </div>
           </div>
 
           <div class="project-card">
-            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
-            <h2 class="project-title">Project Three</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Github</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+            <img src="./assets/project-1.png" alt="Project 5" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Limbed Robot Manipulability</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="window.open('./assets/docs/resume.pdf')">Report</button>
             </div>
           </div>
-        </div>
+
+          <div class="project-card">
+            <img src="./assets/project-1.png" alt="Project 6" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Mobile Robot Trajectory Tracking</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/AlePuglisi/bicycle-feedback-linearization-ros'">Github</button>
+              <button class="btn btn-color-2" onclick="window.open('./assets/docs/Trajectory_Tracking_Report.pdf')">Report</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/project-1.png" alt="Project 7" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Mobile Robot Navigation</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/AlePuglisi/perception-localization-mapping-projects'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/AlePuglisi/navigation-learning'">Tutorials</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/project-1.png" alt="Project 8" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Three Tanks System Control</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="window.open('./assets/docs/Three_Tanks_Report.pdf')">Report</button>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/project-1.png" alt="Project 8" class="project-img" />
+            <div class="project-info">
+              <h2 class="project-title">Trailway DC Motor Control</h2>
+              <h2 class="project-skills">MATLAB | Simulink | Modeling | Control</h2>
+              <ul class="project-description">
+                <li>Developed a DC motor control loop in ROS2</li>
+                <li>Implemented P+PI cascade controller</li>
+                <li>Tested with simulated and real hardware</li>
+              </ul>
+            </div>
+            <div class="btn-proj-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="window.open('./assets/docs/Trailway_DC_Motor_Report.pdf')">Report</button>
+            </div>
+          </div>
 
         <button class="scroll-btn right" id="scroll-right">&#10095;</button>
       </div>
 
       <img
         src="./assets/arrow.png"
-        alt="Arrow icon2"
-        class="icon2 arrow2"
+        alt="Arrow icon"
+        class="icon arrow2"
         onclick="location.href='./#diary'"
       />
 
@@ -419,11 +530,47 @@
       />
     </section> -->
 
+
     <!--BLOG SECTION -->
     <section id="diary">
-      <p class="section__text__p1">What I'm writing lately in my</p>
-      <h1 class="title">Diary</h1>
-      <p> BLOG SECTION </p>
+      <p class="section__text__p1">Read My</p>
+      <h1 class="title">"Diary"</h1>
+
+      <div class="diary-details-container">
+        <div class="diary-containers">
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Oct.2025) Festival Va Savoir</h2>
+            <p>I partecipate in the Fetsival Va Savoir (Montpellier) as a member of ailerons</p>
+          </div>
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Oct.2025) Joined Ailerons</h2>
+            <p>I rencently joined Asso Ailerons!</p>
+          </div>
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Oct.2025) Diving in Montpelleir</h2>
+            <p>I have done some first dives in Montpellier! In Carnon and Palavas.</p>
+          </div>
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Oct.2025) Start PhD</h2>
+            <p>In October 2025 I started my PhD in Montpellier</p>
+          </div>
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Sept.2025) WildDrone Summer School</h2>
+            <p>In September 2025 I participate in the WildDrone Summer School</p>
+          </div>
+
+          <div class="diary-container">
+            <h2 class="diary-title">(Aug.2025) Started Scuba Diving</h2>
+            <p>This Summer I get certified OWD and Advanced Adventurer with SSI</p>
+          </div>
+
+        </div>
+      </div>
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -437,32 +584,41 @@
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
-        <div class="contact-btn-container">
-          <button class="btn btn-color-2 project-btn" onclick="location.href='mailto:puglisialessandro27@gmail.com'">
-            
-            <div class="contact-info-container">
-              <img
-                src="./assets/email.png"
-                alt="Email icon"
-                class="icon contact-icon email-icon"
-              />
-              <p>puglisialessandro27@gmail.com</p>
-            </div>
 
-          </button>
-          <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.linkedin.com/in/puglisialessandro/'">
-            
-            <div class="contact-info-container">
-              <img
-                src="./assets/email.png"
-                alt="Email icon"
-                class="icon contact-icon email-icon"
-              />
-              <p>LinkedIn Me</p>
-            </div>
+      <div class="contact-info-container">
+        <div class="contact-btns-container"> 
+          <div class="contact-btn-container">
 
-          </button>
-        </div>   
+            <button class="btn-contact btn-color-2" onclick="location.href='mailto:puglisialessandro27@gmail.com'">
+              
+              <div class="contact-info-container">
+                <img
+                  src="./assets/email.png"
+                  alt="Email icon"
+                  class="icon contact-icon email-icon"
+                />
+                Send Me an Email
+              </div>
+
+            </button>
+          </div>   
+
+          <div class="contact-btn-container">
+            <button class="btn-contact btn-color-2" onclick="location.href='https://www.linkedin.com/in/puglisialessandro/'">
+              
+              <div class="contact-info-container">
+                <img
+                  src="./assets/linkedin.png"
+                  alt="Email icon"
+                  class="icon contact-icon email-icon"
+                />
+                Message Me on LinkedIn
+              </div>
+
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
 
